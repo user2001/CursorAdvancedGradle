@@ -1,10 +1,10 @@
 package Task2;
 
-public class SongGetter implements Runnable {
+public class Getter implements Runnable {
     Song song;
     Thread thread;
 
-    SongGetter (Song song) {
+    Getter(Song song) {
         this.song = song;
         thread = new Thread(this, "GetSong");
         thread.start();

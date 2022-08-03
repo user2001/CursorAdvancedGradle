@@ -1,17 +1,17 @@
 package Task3;
 
-public class PlayerMain {
+public class Main {
     public static void main(String[] args) throws InterruptedException {
-        JazzThreads jazzThreads = new JazzThreads();
-        RapThreads rapThreads = new RapThreads();
-        ClassicalMusicThreads classicalMusicThreads = new ClassicalMusicThreads();
-        HipHopThreads hipHopThreads = new HipHopThreads();
-        RockThreads rockThreads = new RockThreads();
-        Thread thread1 = new Thread(jazzThreads);
-        Thread thread2 = new Thread(rapThreads);
-        Thread thread3 = new Thread(classicalMusicThreads);
-        Thread thread4 = new Thread(hipHopThreads);
-        Thread thread5 = new Thread(rockThreads);
+        Genre jazzThreads = new Jazz();
+        Genre rapThreads = new Rap();
+        Genre classicalMusicThreads = new Classical();
+        Genre hipHopThreads = new HipHop();
+        Genre rockThreads = new Rock();
+        Thread thread1 = new Thread((Runnable) jazzThreads);
+        Thread thread2 = new Thread((Runnable) rapThreads);
+        Thread thread3 = new Thread((Runnable) classicalMusicThreads);
+        Thread thread4 = new Thread((Runnable) hipHopThreads);
+        Thread thread5 = new Thread((Runnable) rockThreads);
         thread1.start();
         thread2.start();
         thread3.start();
